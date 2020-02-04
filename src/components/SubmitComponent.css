@@ -1,0 +1,73 @@
+.box{
+
+    position: absolute;
+    width: 520px;
+    height: 558.3px;
+    left: 500px;
+                                                                   top: 150px;
+    border: 1px solid rgba(150, 12, 12, 0.5);
+    box-sizing: border-box;
+    border-radius: 18px 18px 0px 0px;
+}
+
+.txt{
+    position: absolute;
+    left: 18.62%;
+    right: 44.74%;
+    top: 20.17%;
+    bottom: 34.72%;
+    
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 55px;
+    /* or 111% */
+    
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    
+    color: #960C0C;
+}
+
+.tx{
+    position: absolute;
+    left: 18.62%;
+    right: 34.87%;
+    top: 54.5%;
+    bottom: 21.94%;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #2B1C1C;
+}
+
+.circle{
+    height: 80px;
+    width: 80px;
+    margin-left: 600px;
+    margin-top: 140px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.btb{
+    margin-top: 460px;
+    background-color: #FF1919;
+    margin-left: 98px;
+    /* padding: 15px; */
+    padding: 15px 70px 15px 26px;  
+}
+
+.arr{
+    color: #FFFFFF;
+}
+
+.bt{
+    margin-left: 1250px;
+    margin-top: 30px;
+}

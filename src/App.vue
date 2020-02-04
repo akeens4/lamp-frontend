@@ -3,9 +3,9 @@
 <template>  
 <div id='app'>
     <RegisterComponent />
-    <transition name="fade">
+    <!-- <transition name="fade">
       <router-view></router-view>
-    </transition>
+    </transition> -->
 </div>
 </template>
 
@@ -18,7 +18,8 @@
     export default {
       name: 'app',
       components: {
-        RegisterComponent
+        RegisterComponent,
+
       }
     }
 </script>
