@@ -25,7 +25,7 @@
                 <input type="email" class="form-control" name="email" id="email" v-model="email" placeholder="Email Address">
             </div>
             <div class="form-group">
-              <input type="checkbox" class="form-control" true-value="yes" false-value="no" name="verified" id="verified" v-model="verified" />
+              <input type="checkbox" class="form-control" name="verified" id="verified" v-model="verified" />
             </div>
 
               <div  class="form-group" id="register_bigform">
