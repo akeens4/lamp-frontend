@@ -2,10 +2,9 @@
 
 <template>  
 <div id='app'>
-    <RegisterComponent />
-    <!-- <transition name="fade">
+    <transition name="fade">
       <router-view></router-view>
-    </transition> -->
+    </transition>
 </div>
 </template>
 
@@ -14,12 +13,7 @@
 </style>
 
 <script>
-  import RegisterComponent from './components/RegisterComponent.vue'
     export default {
       name: 'app',
-      components: {
-        RegisterComponent,
-
-      }
     }
 </script>

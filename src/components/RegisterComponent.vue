@@ -1,7 +1,6 @@
 <template>
     <div class="row" id="register_wrapper">        
       <div class="col-md-5" id="register_frame-col1">
-        <div class="container" id="hold">
         <div class="row">
           <img src="./semicolon-logo.svg" class="col-md-6">
         </div>
@@ -66,7 +65,6 @@
            
             </div>
           </form>
-        </div>
         </div>
 
         <div class="col-md-7" id="register_frame-col2"> 

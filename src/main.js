@@ -17,12 +17,24 @@ Vue.use(VueAxios, axios)
 Vue.config.productionTip = false;
 
 import RegisterComponent from './components/RegisterComponent.vue';
+import ProfileComponent from './components/ProfileComponent.vue';
+import ProfileComponents from './components/ProfileComponents.vue';
 
 const routes = [
   {
     name: 'register',
     path: '/register',
     component: RegisterComponent
+},
+{
+  name: 'profile',
+  path: '/profile',
+  component: ProfileComponent
+},
+{
+  name: 'profiles',
+  path: '/profiles',
+  component: ProfileComponents
 }
 ];
 
