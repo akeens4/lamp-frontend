@@ -25,15 +25,15 @@
                 <!-- <label for="inputEmail4">Email</border-color: red;label> -->
                 <input type="email" class="form-control" name="email" id="email" v-model="email" placeholder="Email Address">
             </div>
-<<<<<<< HEAD
+
             <div class="form-group">
               <input type="checkbox" class="form-control" name="verified" id="verified" v-model="verified" />
             </div>
-=======
+
             <!-- <div class="form-group">
               <input type="checkbox" class="form-control" true-value="yes" false-value="no" name="verified" id="verified" v-model="verified" />
             </div> -->
->>>>>>> c85a74016048430a9dcf14bc28a22285d32d7fbf
+
 
               <div  class="form-group" id="register_bigform">
               <!-- <label for="inputPhone">Phonenumber</label> -->
@@ -139,6 +139,6 @@
 
   }
 
-</script>
+<!--</script>
 
 <style src="./Register.css" scoped></style>

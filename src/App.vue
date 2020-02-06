@@ -1,25 +1,24 @@
-// App.vue
-
 <template>  
 <div id='app'>
-    <RegisterComponent />
-    <!-- <transition name="fade">
-      <router-view></router-view>
-    </transition> -->
+    
+    <Applicant />
+
 </div>
 </template>
 
-<style src="./components/Register.css" scoped>  
+<style src="./components/Applicant.css" scoped>  
     
 </style>
 
 <script>
-  import RegisterComponent from './components/RegisterComponent.vue'
+
+  import Applicant from './components/Applicant.vue'
+
     export default {
       name: 'app',
       components: {
-        RegisterComponent,
-
+       Applicant,
+     
       }
     }
 </script>

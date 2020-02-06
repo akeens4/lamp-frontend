@@ -1,130 +1,69 @@
 <template>
-  <div>
-    <div class="container box">
-      <div class="row">
-        <div class= "opt">
-          <p class = "par">1.<br>Which of these options<br> completes the progression?</p>
-          <br>
-          <div class="custom-control custom-radio mt-2 rd">
-              <input type="radio" class="custom-control-input" name="customRadio" id="customRadio2" checked>
-              <label class="custom-control-label" for="customRadio2">Answer 1</label>
-          </div>
-          <div class="custom-control custom-radio mt-3 rd">
-              <input type="radio" class="custom-control-input" name="customRadio" id="customRadio3" checked>
-              <label class="custom-control-label" for="customRadio3">Answer 2</label>
-          </div>
-          <div class="custom-control custom-radio mt-4 rd">
-              <input type="radio" class="custom-control-input" name="customRadio" id="customRadio4" checked>
-              <label class="custom-control-label" for="customRadio4">Answer 3</label>
-          </div>
-  <br>
-          <!-- <button type="button" class="btn bt">Next<i class="fas fa-long-arrow-alt-right arw"></i></button>
-           -->
-           <button type="button" class="btn bt"  v-if="!timer"
-      @click="startTimer">Next<i class="fas fa-long-arrow-alt-right arw"></i></button>
+  <div id="navbar">
+   <nav class="navbar navbar-expand-md top">
+    <a href="http://semicolon.africa/" class="navbar-brand">
+        <img src="./semicolon.svg" height="28" alt="Semicolon" class="lo">
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ml-auto">
+           <ul class="navbar-nav drop">
+      
+      <li class="nav-item dropdown drop">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #960C0C; padding-left: 1100px;">
+          Hello, Reuben
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
         </div>
     </div>
-    </div>
-      <div class="box1"></div> 
-      <Timer />
+</nav>
+   
   </div>
 </template>
 
 <script>
-import Timer from "./Timer.vue"
 
-    export default {
-  name: 'Navbar',
-  components: {
-      Timer
-  }
-    }
+export default {
+  name: 'navbar',
 
-
+}
 </script>
 
-<style scoped>
-.box{
+<style>
+.lo{
+  height: 34px;
+  padding-top: 12px;
+  /* margin-left: 15px; */
+  position: absolute;
+  left: 9.38%;
+  right: 75.8%;
+  top: 15%;
+  bottom: 92.22%;
+}
+
+.drop{
+  color: red;
   position: relative;
-  width: 80%;
-  margin-top: 60px;
-  background: #FFFFFF;
-  box-shadow: 0px 15px 30px rgba(206, 196, 196, 0.15);
-  border-radius: 12px 12px 0px 0px;
-}
-.box:after {
-  content: "";
-  display: block;
-  padding-bottom: 49%;
+  left: -58px;
+  right: 30.8%;
+  top: 3.33%;
+  bottom: 92.22%;
+ 
 }
 
-.opt {
-  position: absolute;
-  padding-top: 46px;
-  padding-left: 50px;
-  width: 100%;
-  height: 40%;
+.top{
+  background-color: #FFFFFF;
 }
-
-.par{
-padding-top: 32px;
-padding-left: 80px;
-font-family: 'IBM Plex Sans', sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 23px;
-color: #960C0C;
-}
-
-.form-check{
-  padding-left: 120px;
-  /* width: 176.85px; */
-   height: 40px; 
-  /* line-height: 23px; */
-  /* left: 345px;
-  top: 621px; */
-}
-
-.bt{
-  position: absolute;
-  color: #FF2E2E;
-  padding-left: 20px;
-  margin-top: 23px;
-  margin-left:  80px;
-  border: 2px solid #FF2E2E;
-  box-sizing: border-box;
-  border-radius: 6px;
-  text-align: center;
-}
-
-.arw{
-  /* right: 1200px; */
-  color: #FF2E2E;
-  padding-left: 15px;
-  left: 15px;
-}
-
-.rd{
-  margin-left: 100px;
-  /* position: absolute; */
-  width: 178.85px;
-  height: 21.15px;
-  left: 5px;
-  top: 1px;
-
-}
-
- .box1{
-  position: absolute;
-   width: 430px;
-  height: 340px;
-  left: 820px;
-  top: 230px; 
-
-  background: #FFF0CE;
-  border-radius: 12px;
-} 
-
-
 
 </style>
+
+

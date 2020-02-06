@@ -16,13 +16,13 @@ Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false;
 
-import RegisterComponent from './components/RegisterComponent.vue';
+// import RegisterComponent from './components/RegisterComponent.vue';
 
 const routes = [
   {
     name: 'register',
     path: '/register',
-    component: RegisterComponent
+    // component: RegisterComponent
 }
 ];
 
