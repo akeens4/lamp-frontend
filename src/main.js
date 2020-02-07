@@ -18,7 +18,7 @@ Vue.config.productionTip = false
 
 import RegisterComponent from './components/RegisterComponent.vue';
 import ProfileComponent from './components/ProfileComponent.vue';
-// import RegisterComponent from './components/RegisterComponent.vue';
+import Applicant from './components/Applicant.vue';
 
 const routes = [
   {
@@ -30,7 +30,12 @@ const routes = [
   name: 'profile',
   path: '/profile',
   component: ProfileComponent
-}
+},
+{
+  name: 'applicant',
+  path: '/applicant',
+  component: Applicant
+},
 ];
 
 export default new Vuex.Store({

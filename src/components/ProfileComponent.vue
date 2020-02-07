@@ -1,16 +1,9 @@
 <template>
+<div id = "profile">
+    
   <div class="container-fluid wrapper">  
-      <div class="row">
-        <div class="body-wrapper">
-            <div class="wrapper">
-                <img>
-                <div>
-                    <label for="">Applicant Records</label>
-                    <label for="">Hello, {{applicant_name}}</label>
-                </div>
-            </div>
-        </div>
-      </div>    
+      
+      <Navbar />
     <div class="container-fluid conbox">
         <div class="row">
             <div class="col-sm-3 conboxCol">
@@ -98,28 +91,32 @@
                                 <h6 id="prog">More info</h6>
                                 <div class="row bioRow">
                                     <div class="col-sm-6">
-                                       <h6>First Name</h6>
+                                       <h6>State of Origin</h6>
                                        <p id="details">Omotolani{{firstname}}</p>
                                     </div>
                                     <div class="col-sm-6">
-                                        <h6>Last Name</h6>
+                                        <h6>State of Residence</h6>
                                        <p id="details">Ligali{{firstname}}</p>
                                     </div>
 
                                 </div>
                                 <div class="row bioRow">
                                     <div class="col-sm-6">
-                                       <h6>Email</h6>
-                                       <p id="details">Ligalit@gmail.com{{email}}</p>
+                                       <h6>Higher Institution</h6>
+                                       <p id="details">Omotolani{{firstname}}</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h6>Course of Study</h6>
+                                       <p id="details">Ligali{{firstname}}</p>
                                     </div>
                                 </div>
                                 <div class="row bioRow">
                                     <div class="col-sm-6">
-                                       <h6>Gender</h6>
+                                       <h6>University Grade</h6>
                                        <p id="details">Female{{gender}}</p>
                                     </div>
                                     <div class="col-sm-6">
-                                        <h6>Age Range</h6>
+                                        <h6>Marital Status</h6>
                                        <p id="details">15-20{{age}}</p>
                                     </div>
 
@@ -166,15 +163,45 @@
         
         
     </div>
-  </div>            
+  </div>
+</div>         
 </template>
 
 <script>
-    export default {
-  name: 'ProfileComponent',
-    }
+    import Navbar from "./Navbar"
+    import Vue from 'vue';
+    import Vuetify from "vuetify";
+    import { GridPlugin, Page, Sort, Filter, Toolbar } from '@syncfusion/ej2-vue-grids';
+    Vue.use(GridPlugin);
+    Vue.use(Vuetify);
+    import axios from 'axios'
+        export default {
+            name:'applicant',
+            components: {
+            Navbar,
+            },
+            data() {
+            return {
+            applicants: [],
+            pageSettings: { pageSize: 7 },
+                toolbar: ['Add', 'Edit', 'Delete', 'Update']
+            }
+            },
 
-</script>
+            created() {
+                axios.get(`http://localhost:8085/lamp-web/getApplicant`)
+                .then(response => {
+                this.applicants = response.data
+                })
+            },
+            provide: {
+            grid: [Page,Sort, Filter, Toolbar]
+            }          
+        }
+        
+
+    </script>
+
 
 <style src="./Register.css" scoped>
 

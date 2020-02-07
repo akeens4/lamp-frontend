@@ -4,7 +4,7 @@
       <router-view></router-view>
     </transition>
     
-    <Applicant />
+    <!-- <Applicant /> -->
 
 </div>
 </template>
