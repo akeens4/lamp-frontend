@@ -9,45 +9,14 @@
     <div class="col-sm-2 blue">
      <div class="space"></div> 
      <div class="row">
-     <h6 class="row-1">All Applicants</h6>
+     <img src="../assets/apple.png" class="size" height="30" width="30"><h6 class="row-1">All Applicants</h6>
      <h6 class="row-1">Interviewing</h6>
      <h6 class="row-1">Interviewed</h6>
      <h6 class="row-1">Offered Admission</h6>
      <h6 class="row-1">Declined Admission</h6>
      <h6 class="row-1">Enrolled</h6>
      </div>
-<!-- <v-card>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant.sync="mini"
-      permanent
-    >
-      <v-list-item class="px-2">
-     
-        <v-list-item-title>All Applicants</v-list-item-title>
-        
-        
-        
-        <v-list-item-title>Interviewed</v-list-item-title>
-        
-        <v-list-item-title>Offered Admission</v-list-item-title>
-       
-        <v-list-item-title>Declined Admission</v-list-item-title>
-              
-        <v-list-item-title>Enrolled</v-list-item-title>
-      </v-list-item>
-      
-      
-      <v-list dense>
-      <v-list-item>
-<v-list-item-title>Interviewing</v-list-item-title>
-        </v-list-item>
-              <v-list-item>
-<v-list-item-title>Interviewing</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-  </v-card> -->
+
     </div>
     <div class="col-sm-10">
     <ejs-grid :dataSource="applicants" 
@@ -150,6 +119,14 @@
       font-weight: 500;
       font-size: 13px;
       line-height: 23px;
+    }
+
+    .size {
+
+      position: relative;
+      top: 15px;
+      left: 7px;
+
     }
 
 </style>
