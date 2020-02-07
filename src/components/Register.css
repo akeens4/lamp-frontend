@@ -86,7 +86,7 @@ transition: inherit;
 #register_fil{
     margin-top: 80px;
     max-width: 480px;
-    margin-left: 50px;
+    
 }
 select{     
     height: 72px;
@@ -113,9 +113,7 @@ select:focus{
     background-color: white;
     box-shadow: none;
 }
-option{
-    align-items: center;
-}
+
 #register_wrapper{
     border-radius: 6px;
     width: 100%;
@@ -126,7 +124,8 @@ option{
 #register_frame-col1{
     background-color: white;
     /* margin-left: 5px; */
-    padding: 0 5%;
+    padding: 0 9%;
+    
 }
 #register_frame-col2{
     background-color: #FFF0CE;
@@ -160,7 +159,7 @@ a{
     color: crimson;
 }
 img{
-    padding: 10% 5px;   
+    padding: 10% 7px;   
   }
 #register_partner{
     float: right;
@@ -234,12 +233,16 @@ img{
     /* transform: rotate(90deg); */
 }
 .first{    
-    /* border-right: 1px solid rgba(130, 130, 130, 0.15); */
-    background-color: #FFF0CE;
-    /* max-height: 48rem; */
+    border-right: 1px solid rgba(130, 130, 130, 0.15);
+    
+    
+}
+.pa{
+    margin-top: 5em;    
+    color: #431288;
 }
 .conboxCol2{
-    margin-top: 5em;
+    
 }
 .menu{
     padding-left: 5rem;
@@ -247,4 +250,144 @@ img{
 }
 .spanImg{
     padding-right: 3rem;
+}
+.app{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 5em;
+    padding-left:1.5em;
+    color: rgba(43, 28, 28, 0.5);
+}
+.but{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid yellow;
+    margin-left: 1.5em;
+    color: #960C0C;
+}
+.deci{
+    padding-right: 1rem;
+}
+.wrap2{
+    margin-top: 5rem;
+    padding-left: 2rem;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    border-top: 1px solid rgba(130, 130, 130, 0.15);
+    padding-top: 1.5rem;
+}
+.wrap3{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 27px;
+    display: flex;
+    /* align-items: center; */
+    /* text-align: center; */
+    letter-spacing: 0.02em;
+    margin-bottom: -2rem;
+}
+h5{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: rgba(43, 28, 28, 0.85);
+}
+.row1{
+    margin-top: 5rem;
+    background: #FFF2C7;
+    border-radius: 12px;
+    height: 155px;
+}
+#prog{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    padding-left: 2em;
+    padding-top: 2em;
+    letter-spacing: -0.02em;
+
+    color: #960C0C;
+}
+.appl{
+    padding-left: 2.6em;
+
+}
+.imgs{
+
+    padding: 0em;
+}
+.inner{
+    margin-top: 5rem;
+    margin-left: em;
+    height: 330px;
+    background: #FFF2C7;
+    border-radius: 12px;  
+}
+.bioRow{
+    padding-left: 2.6rem;
+    padding-top: 1rem;
+}
+h6{
+    font-family: IBM Plex Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.05em;
+
+color: #2B1C1C;
+}
+#details{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+
+    color: #2B1C1C;
+
 }

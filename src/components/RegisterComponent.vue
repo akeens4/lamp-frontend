@@ -2,7 +2,7 @@
     <div class="row" id="register_wrapper">        
       <div class="col-md-5" id="register_frame-col1">
         <div class="row">
-          <img src="./semicolon-logo.svg" class="col-md-6">
+          <img src="./semicolon-logo.svg" class="col-LG-6 img">
         </div>
 
           <form id="register_fil" v-on:submit="submitApplication" method="POST">
@@ -20,14 +20,13 @@
               <input type="text" class="form-control" name="userName" id="userName" v-model="userName" placeholder="Username">
             </div>
             
-            <div class="form-group" id="register_bigform1">
+            <div class="form-row">
+            <div class="form-group col-md-11" id="register_bigform1">
                 <!-- <label for="inputEmail4">Email</border-color: red;label> -->
                 <input type="email" class="form-control" name="email" id="email" v-model="email" placeholder="Email Address">
             </div>
-            <!-- <div class="form-group">
-              <input type="checkbox" class="form-control" true-value="yes" false-value="no" name="verified" id="verified" v-model="verified" />
-            </div> -->
-
+            <input type="checkbox" class="form-control" name="verified" id="verified" v-model="verified" style="width:2rem"/>
+            </div>
               <div  class="form-group" id="register_bigform">
               <!-- <label for="inputPhone">Phonenumber</label> -->
               <input type="text" class="form-control"  placeholder="Phone Number" name="phone" id="phone" v-model="phone">

@@ -1,0 +1,242 @@
+
+h2{
+    color: #960C0C;
+    text-align: center;
+    margin-bottom: 100px;
+    font-family:  IBM Plex Sans;
+    font-style: Regular;
+    font-size: 24px;
+    line-height: 31px;
+    line-height: 100%;
+    
+
+}
+
+h3{
+font-family: IBM Plex Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 23px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.05em;
+color: #2B1C1C;
+}
+
+    .floating {
+        margin-bottom: 2rem;
+        background-color: var(--field__background);
+        transition: background-color 0.2s ease;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    .floating:hover,
+    .floating:focus-within {
+        background-color: var(--field__background--hover);
+    }
+
+    .floating__input {
+        padding: 1.8rem 1rem0.6rem;
+        font-size: 2rem;
+       
+        transition: border-color 0.2s  ease;
+        caret-color: var(--color__accent);
+    }
+    .floating:hover .floating__input {
+        border-color: var(--input__border--hover);
+    }
+    .floating__input::placeholder {
+        color: rgba(0, 0, 0, 0);
+      }
+      
+.floating__label {
+    display: block;
+    position: relative;
+    max-height: 0;
+    font-weight: 500;
+    pointer-events: none;
+    
+  }
+  .floating__label::before {
+    color: var(--label__color);
+    content: attr(data-content);
+    display: inline-block;
+    filter: blur(0);
+    backface-visibility: hidden;
+    transform-origin: left top;
+    transition: transform 0.2s ease;
+    left: 1rem;
+    bottom:30px;
+    position: relative;
+  }
+  
+  .floating__label::after {
+    bottom: 5rem;
+    content: "";
+    height: 0.1rem;
+    position: absolute;
+    transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 180ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+    opacity: 0;
+    left: 0;
+    top: 100%;
+    margin-top: -0.1rem;
+    transform: scale3d(0, 1, 1);
+    width: 100%;
+    background-color: var(--color__accent);
+  }
+  
+  .floating__input:focus + .floating__label::after {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+  
+  .floating__input:placeholder-shown + .floating__label::before {
+    transform: translate3d(0, -2.2rem, 0) scale3d(1, 1, 1);
+  }
+  
+  .floating__label::before,
+  .floating__input:focus + .floating__label::before {
+    transform: translate3d(0, -3.12rem, 0) scale3d(0.82, 0.82, 1);
+  }
+  
+  .floating__input:focus + .floating__label::before {
+    color: var(--color__accent);
+  }
+  
+.form{
+
+    border-radius: 6px;
+    width: 540px;
+    height: 612px;
+    margin: auto;
+    
+}
+.formquest{
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 10px;
+    width: 720px;
+    height: 840px;
+    padding-right: 90px;
+    padding-left: 90px;
+    padding-top: 78px;
+    padding-bottom: 150px;
+    margin: 0 auto;
+    
+    
+}
+.input2{
+    border: 1px solid rgba(150, 12, 12, 0.5);
+    height:72px;
+    width:258px;
+    border-radius: 6px;
+    color:#2B1C1C;
+    font-family: IBM Plex Sans;
+    font-style: Regular;
+    font-size: 20px;
+   
+    line-height: 23px;
+    line-height: 100%;
+    text-align: Left;
+    vertical-align: Center;
+    letter-spacing: 5%;
+    stroke: solid;
+    margin-bottom: 10px;
+   
+    
+    
+}
+.select1,.input1{
+    border: 1px solid rgba(150, 12, 12, 0.5);
+    border-radius: 6px;
+    height:72px;
+    width:540px;
+    font-family: IBM Plex Sans;
+    font-style: Regular;
+    color:#2B1C1C;
+    font-size: 20px;
+    line-height: 23px;
+    line-height: 100%;
+    text-align: Left;
+    vertical-align: Center;
+    letter-spacing: 5%;
+    margin-bottom: 24px;
+   
+}
+.inputSelect{
+    border: 1px solid rgba(150, 12, 12, 0.5);
+    border-radius: 6px;
+    height:72px;
+    width:258px;
+    color:#2B1C1C;
+    font-family: IBM Plex Sans;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 23px;
+    line-height: 100%;
+    text-align: Left;
+    vertical-align: Center;
+    letter-spacing: 5%;
+    stroke: solid;
+    margin-bottom: 24px;
+   
+}
+button{
+    width: 180px;
+    height: 72px;
+    font-size: 20px;
+    
+}
+
+#routerlink{
+    color: white;
+    text-decoration: none;
+}
+#routerlink1{
+    color: red;
+    text-decoration: none;
+}
+#routerlink1:hover{
+    color:white;
+    text-decoration: none;
+   
+    
+}
+.subbtn{
+    padding-top: 30px;
+}
+#navbarr{
+    position: absolute;
+    width: 1920px;
+    height: 120px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    
+}
+::placeholder{
+    color:#2B1C1C; 
+    
+}
+.red{
+    border: 1px solid rgba(150, 12, 12, 0.5);
+}
+
+.bt{
+    margin-left: -15px;
+}
+
+.bt2{
+    margin-right: 13px;
+}
+.nyscyear{
+    margin-left:25px;
+}
+::placeholder{
+    color: #2B1C1C;
+}
+

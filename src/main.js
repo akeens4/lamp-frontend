@@ -14,11 +14,11 @@ Vue.use(VueRouter);
 Vue.use(VueAxios, axios)
 
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 
 import RegisterComponent from './components/RegisterComponent.vue';
 import ProfileComponent from './components/ProfileComponent.vue';
-import ProfileComponents from './components/ProfileComponents.vue';
+// import RegisterComponent from './components/RegisterComponent.vue';
 
 const routes = [
   {
@@ -30,11 +30,6 @@ const routes = [
   name: 'profile',
   path: '/profile',
   component: ProfileComponent
-},
-{
-  name: 'profiles',
-  path: '/profiles',
-  component: ProfileComponents
 }
 ];
 
