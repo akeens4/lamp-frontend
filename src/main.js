@@ -15,14 +15,25 @@ Vue.use(VueAxios, axios)
 
 
 Vue.config.productionTip = false;
-
-// import RegisterComponent from './components/RegisterComponent.vue';
+import Applicant from './components/Applicant.vue';
+import RegisterComponent from './components/RegisterComponent.vue';
+import createPassword from './components/createPassword.vue';
 
 const routes = [
   {
+    name: 'applicant',
+    path: '/applicant',
+    component: Applicant
+},
+  {
     name: 'register',
     path: '/register',
-    // component: RegisterComponent
+    component: RegisterComponent
+},
+{
+  name: 'password',
+  path: '/password',
+  component: createPassword
 }
 ];
 

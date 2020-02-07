@@ -8,7 +8,7 @@
     <div class="row" id="register_wrapper">        
       <div class="col-md-5" id="register_frame-col1">
         
-            <div class="col-md-6">   
+            <div class="col-md-6">
                 <img src="./semicolon-logo.svg" id="semi-logo">
             </div>
         
@@ -42,15 +42,6 @@
             </div>
 
 
-                    <!-- ERRORS -->
-                <!-- <div class="alert alert-danger" v-show="errors.any()">
-                    <div v-if="errors.has('password')">
-                        {{ errors.first('password') }}
-                    </div>
-                    <div v-if="errors.has('confirmPassword')">
-                        {{ errors.first('confirmPassword') }}
-                    </div>
-                </div> -->
           </form>
         </div>
 
@@ -79,8 +70,8 @@
 
 const baseURL = "http://localhost:8083/lamp-web/getApplicant"
 export default {
-
-    name:'app',
+    name:'createPassword',
+  
  data(){
    return{
      applicants: [],

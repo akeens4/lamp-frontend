@@ -139,6 +139,6 @@
 
   }
 
-<!--</script>
+</script>
 
 <style src="./Register.css" scoped></style>
