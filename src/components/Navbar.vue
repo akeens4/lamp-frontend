@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav ml-auto">
            <ul class="navbar-nav drop">
-      <li class="nav-item"><h2 class="nav-link">Applicant Record</h2></li>
+      <!--<li class="nav-item"><h2 class="nav-link">Applicant Record</h2></li> -->
       <li class="nav-item dropdown drop">
       
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #960C0C; padding-left: 1100px;">

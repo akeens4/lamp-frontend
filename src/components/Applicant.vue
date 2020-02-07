@@ -6,27 +6,55 @@
     
     <div class="container">
     <div class="row">
-    <div class="col-sm-2 blue"> 
- <!--    <ul class="list-group">
-  <li class="list-group-item active">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
-      <h4>All Applicants</h4>
-       <h4>Interviewing</h4>
-       <h4>Interviewed</h4>
-       <h4>Offered Admission</h4>
-       <h4>Declined Admission</h4>
-       <h4>Enrolled</h4> -->
+    <div class="col-sm-2 blue">
+     <div class="space"></div> 
+     <div class="row">
+     <h6 class="row-1">All Applicants</h6>
+     <h6 class="row-1">Interviewing</h6>
+     <h6 class="row-1">Interviewed</h6>
+     <h6 class="row-1">Offered Admission</h6>
+     <h6 class="row-1">Declined Admission</h6>
+     <h6 class="row-1">Enrolled</h6>
+     </div>
+<!-- <v-card>
+    <v-navigation-drawer
+      v-model="drawer"
+      :mini-variant.sync="mini"
+      permanent
+    >
+      <v-list-item class="px-2">
+     
+        <v-list-item-title>All Applicants</v-list-item-title>
+        
+        
+        
+        <v-list-item-title>Interviewed</v-list-item-title>
+        
+        <v-list-item-title>Offered Admission</v-list-item-title>
+       
+        <v-list-item-title>Declined Admission</v-list-item-title>
+              
+        <v-list-item-title>Enrolled</v-list-item-title>
+      </v-list-item>
+      
+      
+      <v-list dense>
+      <v-list-item>
+<v-list-item-title>Interviewing</v-list-item-title>
+        </v-list-item>
+              <v-list-item>
+<v-list-item-title>Interviewing</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+  </v-card> -->
     </div>
     <div class="col-sm-10">
-    <ejs-grid :dataSource="applicants" :allowPaging="true"
+    <ejs-grid :dataSource="applicants" 
+    :allowPaging="true"
+    :pageSettings=pageSettings
      :allowSorting="true"
-     :pageSettings=pageSettings
-     :allowFiltering="true"
-
+     
        >
       <e-columns>
       <e-column></e-column>
@@ -53,8 +81,10 @@
 <script>
   import Navbar from './Navbar';
   import Vue from 'vue';
+  import Vuetify from "vuetify";
   import { GridPlugin, Page, Sort, Filter, Toolbar } from '@syncfusion/ej2-vue-grids';
   Vue.use(GridPlugin);
+  Vue.use(Vuetify);
    import axios from 'axios'
     export default {
         name:'applicant',
@@ -87,25 +117,39 @@
     @import url(https:cdn.syncfusion.com/ej2/material.css);
 
       .val {
-        
-        margin-top: 50px !important;
+        margin-top: 10px !important;
         background: white;
         background: #FFFFFF;
-    
     }
 
     .container {
       border: 1px solid white !important;
       box-shadow: 0px 15px 30px rgba(130, 130, 130, 0.15) !important;
-      height: 459px;
+      height: 450px;
       padding-top: 30px;
+      width: 400px;
     }
 
     .blue {
-      border: 0.5px solid black;
+      border: 0.5px solid #EFEFEF;
       position: absolute;
       left:15px;
+    }
 
+    .space {
+      position: relative;
+       bottom:30px;
+    }
+    .row-1 {
+      margin-top: 10px;
+      margin-left: 20px;
+      padding: 8.8px;
+      color: #431288;
+      font-family: IBM Plex Sans;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 23px;
     }
 
 </style>

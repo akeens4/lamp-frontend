@@ -69,11 +69,6 @@
         <li >{{applicant.email}}</li>
         <li >{{applicant.password}}</li>
 
-
-
-
-
-
     </ul>
     </div>
 </template>
