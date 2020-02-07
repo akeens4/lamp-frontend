@@ -2,7 +2,7 @@
   <div id="navbar">
    <nav class="navbar navbar-expand-md top">
     <a href="http://semicolon.africa/" class="navbar-brand">
-        <img src="./semicolon.svg" height="28" alt="Semicolon" class="lo">
+        <img src="./semilogo.svg" >
     </a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
