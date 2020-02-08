@@ -1,117 +1,128 @@
  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/vee-validate/2.1.1/vee-validate.js"></script>
- <script>
-   Vue.use(VeeValidate);
- </script>
+ <script src="vuelidate/dist/vuelidate.min.js"></script>
 
+<script src="vuelidate/dist/validators.min.js"></script>
+Vue.use(window.vuelidate.default)
 <template>
     <div class="row" id="register_wrapper">        
       <div class="col-md-5" id="register_frame-col1">
         
-            <div class="col-md-6">
+            <div class="col-md-6">   
                 <img src="./semicolon-logo.svg" id="semi-logo">
             </div>
         
 
-          <form id="register_fil">
+          <form @submit.prevent="validateForm" autocomplete="off" id="register_fil" v-on:submit="createPassword" method="PUT">
               <h1 class="shift">Create Password</h1><br /><br />
             
             <div class="form-group" id="register_bigform1">
-              <input v-model="Password" 
-              type="password"  autocomplete="new-password" class="form-control"
-               name="password" 
+              <input 
+              type="password" class="form-control"
+               name="password" v-model="form.password"
                placeholder="Password">
-               <input type="hidden" name="username">
+               <p v-if="$v.form.password.$invalid" class="error-message">Please enter your password</p>
+               <p v-if="$v.form.password.strongPassword" class="error-message">Strong passwords need to have a letter, a number, a special character, and be more than 6 characters long.</p>
+             
             </div><br />
             
             <div class="form-group" id="register_bigform1">
                 
                 <input 
                  type="password" class="form-control"
-                  name="confirmPassword" autocomplete="new-password"  placeholder="Confirm Password">
-                   
+                  name="confirmPassword" v-model="form.confirmPassword"   placeholder="Confirm Password">
+                   <p v-if="$v.form.confirmPassword.$invalid" class="error-message">Please enter your password to confirm </p>
 
-                  <input type="hidden" name="username">
             </div>
            
                 
               
             <div class="form-group">
-            <button @keypress.enter="createPassword" type="submit" id="register_submit"  class="btn">Submit</button>
+            <button :disabled="$v.form.$invalid" type="submit" id="register_submit"  class="btn">Submit</button>
            
             </div>
 
 
+            
           </form>
         </div>
 
         <div class="col-md-7" id="register_frame-col2"> 
                     
               <button type="submit" class="btn" id="register_partner"> <a href="http://semicolon.africa/">  Partner with us</a></button>
-        
-       
 
         </div>
 
-        <ul v-for="applicant of applicants" :key="applicant.id">
-        <li >{{applicant.username}}</li>
-        <li >{{applicant.firstName}}</li>
-        <li >{{applicant.lastName}}</li>
-        <li >{{applicant.email}}</li>
-        <li >{{applicant.password}}</li>
-
-    </ul>
     </div>
 </template>
 
-<script>
+
+<script >
 
  import axios from 'axios';
-
-const baseURL = "http://localhost:8083/lamp-web/getApplicant"
+import { required, minLength,sameAs } from 'vuelidate/lib/validators'
+ 
 export default {
-    name:'createPassword',
-  
+
+    name:'create',
+     mounted() {
+      console.log('Component mounted.')
+    },
  data(){
    return{
-     applicants: [],
-     Username: '',
-     FirstName:'',
-     LastName:'',
-     Email: '',
-     Password: ''
-
-    
+      form: {
+                password: null,
+                confirmPassword: null
+            }
    }
  },
  
- async created(){
-   
-   try{
-     const res = await axios.get(baseURL);
-     this.applicants= res.data;
+ validations:{
+   form:{
+
+     password:{
+       required,
+       strongPassword(password){
+         return (
+          /[a-z]/.test(password) && // checks for a-z
+          /[0-9]/.test(password) && // checks for 0-9
+          /\W|_/.test(password) && // checks for special char
+          password.length >= 6
+        );
+       }
+       
+     },
+     confirmPassword:{
+       required,
+       sameAs:sameAs('password')
+      
+     }
    }
-   catch(e){
-    console.error(e);
-   }
-  //  console.log("help");
-  
  },
 
+
   methods:{
-    async createPassword(){
-      console.log("help");
+
+    validateForm(){
+
+            if(!this.$v.form.$invalid){
+                console.log('Form Submitted', this.form)
+            }else{
+                console.log('Invalid form')
+            }
+           
+        },
+     createPassword(){
       
-      const baseUrl1 = "http://localhost:8083/lamp-web/updateApplicant/6"
+        return axios.put('http://localhost:8083/lamp-web/createPassword/6',{
+           
+            password:this.form.password
+        })
+        
+        .then(function(res){console.log(res)}).catch(function(err){console.log(err.data)})
+         
       
-        const res = await axios.post(baseUrl1,{password: this.Password});
-          console.log("help");
-      
-          this.applicants= [...this.applicants, res.data];
-          this.Password = "";
-          
-      
-        console.error(e);
+    
       
     }
 
