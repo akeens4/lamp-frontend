@@ -9,8 +9,8 @@
     <div class="col-sm-2 blue">
      <div class="space"></div> 
      <div class="row">
-     <img src="../assets/apple.png" class="size" height="30" width="30"><h6 class="row-1">All Applicants</h6>
-     <h6 class="row-1">Interviewing</h6>
+     <span><img src="../assets/apple.png" class="size"></span><p class="row-1">All Applicants</p>
+     <span><img src="../assets/Vector.png" class="size-2"></span><h6 class="row-1">Interviewing</h6>
      <h6 class="row-1">Interviewed</h6>
      <h6 class="row-1">Offered Admission</h6>
      <h6 class="row-1">Declined Admission</h6>
@@ -124,9 +124,14 @@
     .size {
 
       position: relative;
-      top: 15px;
-      left: 7px;
+      top: 17px;
+      left: 10px;
+    }
 
+    .size-2 {
+      position: relative;
+      top: 40px;
+      right: 130px;
     }
 
 </style>

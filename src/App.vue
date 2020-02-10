@@ -1,17 +1,13 @@
 <template>  
 <div id='app'>
-    <transition name="fade">
-      <router-view></router-view>
-    </transition>
     
+    <transition name="fade">
+       <router-view></router-view>
+    </transition>
     <!-- <Applicant /> -->
 
 </div>
 </template>
-
-<style src="./components/Applicant.css" scoped>  
-    
-</style>
 
 <script>
 
