@@ -69,7 +69,7 @@
          },
 
         created() {
-            axios.get(`http://localhost:8085/lamp-web/getApplicant`)
+            axios.get(`http://localhost:8083/lamp-web/getApplicant`)
             .then(response => {
               this.applicants = response.data
             })

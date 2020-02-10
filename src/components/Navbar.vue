@@ -2,7 +2,7 @@
   <div id="navbar">
    <nav class="navbar navbar-expand-md top">
     <a href="http://semicolon.africa/" class="navbar-brand">
-        <img src="./semilogo.svg" >
+        <img src="./semilogo.svg" alt="Semicolon" class="lo">
     </a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@ export default {
 
 <style>
 .lo{
-  height: 34px;
+  /* height: 34px; */
   padding-top: 12px;
   /* margin-left: 15px; */
   position: absolute;
@@ -62,7 +62,7 @@ export default {
 }
 
 .top{
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
 }
 
 </style>

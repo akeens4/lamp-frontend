@@ -6,10 +6,10 @@
       <Navbar />
     <div class="container-fluid conbox">
         <div class="row">
-            <div class="col-sm-3 conboxCol">
+            <div class="col-sm-2 conboxCol">
                 <img src="./bak.svg">
             </div>
-            <div class="col-sm-6 conboxCol">
+            <div class="col-sm-7 conboxCol">
                 
             </div>
             <div class="col-sm-3 conboxCol">
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="row conboxCol2">
-            <div class="col-sm-3 menu">
+            <div class="col-sm-2 menu">
                 
                 <p class="pa"><span> <img src="./summary.svg" class="spanImg">Summary </span></p>
                 <p><span> <img src="./info.svg" class="spanImg">Full Info </span></p>
@@ -27,7 +27,7 @@
                 
 
                 </div>
-            <div class="col-sm-6 first">                
+            <div class="col-sm-7 first">                
                 <div class="row ">
                     <div class="col-sm-1">
                     </div>
@@ -79,7 +79,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <h6>Age Range</h6>
-                                       <p id="details">15-20{{age}}</p>
+                                       <p id="details">15-20{{dob}}</p>
                                     </div>
 
                                 </div>
@@ -92,32 +92,32 @@
                                 <div class="row bioRow">
                                     <div class="col-sm-6">
                                        <h6>State of Origin</h6>
-                                       <p id="details">Omotolani{{firstname}}</p>
+                                       <p id="details">Ogun{{origin}}</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <h6>State of Residence</h6>
-                                       <p id="details">Ligali{{firstname}}</p>
+                                       <p id="details">Lagos{{residence}}</p>
                                     </div>
 
                                 </div>
                                 <div class="row bioRow">
                                     <div class="col-sm-6">
                                        <h6>Higher Institution</h6>
-                                       <p id="details">Omotolani{{firstname}}</p>
+                                       <p id="details">OAU{{institute}}</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <h6>Course of Study</h6>
-                                       <p id="details">Ligali{{firstname}}</p>
+                                       <p id="details">Animal Production{{study}}</p>
                                     </div>
                                 </div>
                                 <div class="row bioRow">
                                     <div class="col-sm-6">
                                        <h6>University Grade</h6>
-                                       <p id="details">Female{{gender}}</p>
+                                       <p id="details">First class{{grade}}</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <h6>Marital Status</h6>
-                                       <p id="details">15-20{{age}}</p>
+                                       <p id="details">Single{{status}}</p>
                                     </div>
 
                                 </div>
@@ -138,7 +138,7 @@
                     <div class="col-sm-6">
                         <h6 class="app">APP20109</h6>
                         <img class="img-fluid" src="./pix.svg">
-                        <h5 >Ligali Omotolani{{applicant}}</h5>
+                        <h5 >Ligali Omotolani{{applicantId}}</h5>
                         <button type="button" class="btn btn-outline-warning but" >Applicant</button>
                     </div>
                     <div class="col-sm-3">
@@ -171,32 +171,25 @@
     import Navbar from "./Navbar"
     import Vue from 'vue';
     import Vuetify from "vuetify";
-    import { GridPlugin, Page, Sort, Filter, Toolbar } from '@syncfusion/ej2-vue-grids';
-    Vue.use(GridPlugin);
     Vue.use(Vuetify);
     import axios from 'axios'
         export default {
-            name:'applicant',
+            name:'profile',
             components: {
             Navbar,
             },
             data() {
             return {
-            applicants: [],
-            pageSettings: { pageSize: 7 },
-                toolbar: ['Add', 'Edit', 'Delete', 'Update']
             }
             },
 
             created() {
-                axios.get(`http://localhost:8085/lamp-web/getApplicant`)
+                axios.get(`http://localhost:8083/lamp-web/getApplicant/{id}`)
                 .then(response => {
                 this.applicants = response.data
                 })
             },
-            provide: {
-            grid: [Page,Sort, Filter, Toolbar]
-            }          
+           
         }
         
 
