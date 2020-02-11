@@ -149,9 +149,6 @@ select:focus{
 button{border-color:red; 
     color: red;
 }
-a{
-    color: crimson;
-}
 img{
     padding: 10% 7px;   
   }
@@ -227,10 +224,12 @@ img{
     /* transform: rotate(90deg); */
 }
 .first{    
-    border-right: 1px solid rgba(130, 130, 130, 0.15);
-    
-    
+    border-right: 1px solid rgba(130, 130, 130, 0.15);       
 }
+p:hover{
+    cursor: pointer;
+}
+
 .pa{
     margin-top: 5em;    
     color: #431288;
@@ -314,6 +313,9 @@ h5{
 
     color: rgba(43, 28, 28, 0.85);
 }
+h5:hover{
+    cursor: pointer;
+}
 .row1{
     margin-top: 5rem;
     background: #FFF2C7;
@@ -368,6 +370,9 @@ letter-spacing: 0.05em;
 
 color: #2B1C1C;
 }
+h6:hover{
+    cursor: pointer;
+}
 #details{
     font-family: IBM Plex Sans;
     font-style: normal;
@@ -375,11 +380,35 @@ color: #2B1C1C;
     font-size: 16px;
     line-height: 21px;
     /* identical to box height */
-
     display: flex;
     align-items: center;
     letter-spacing: 0.05em;
 
     color: #2B1C1C;
 
+}
+a {color:rgba(43, 28, 28, 0.5);}         /* Unvisited link  */
+a:visited {color:rgba(43, 28, 28, 0.5);} /* Visited link    */
+a:hover {color:#431288;}   /* Mouse over link */
+a:active {color:#431288;}  /* Selected link   */
+
+.profiles_row{
+    margin-top: 5rem;
+    height: 645px;
+    background: #FFF2C7;
+    border-radius: 12px;
+}
+#full{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    padding-left: 2em;
+    padding-top: 2em;
+    letter-spacing: -0.02em;
+
+    color: #960C0C;
 }

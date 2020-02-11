@@ -17,14 +17,17 @@ Vue.use(VueAxios, axios)
 
 
 Vue.config.productionTip = false;
-import Applicant from './components/Applicant.vue';
-import RegisterComponent from './components/RegisterComponent.vue';
-import createPassword from './components/createPassword.vue';
-Vue.config.productionTip = false
+
 
 import RegisterComponent from './components/RegisterComponent.vue';
 import ProfileComponent from './components/ProfileComponent.vue';
+import createPassword from './components/createPassword.vue';
 import Applicant from './components/Applicant.vue';
+import Profile from './components/Profile.vue';
+import Aptitude from './components/Aptitude.vue';
+import activity from './components/activity.vue';
+import SubmitComponent from './components/SubmitComponent.vue';
+
 
 const routes = [
   {
@@ -48,9 +51,24 @@ const routes = [
   component: ProfileComponent
 },
 {
-  name: 'applicant',
-  path: '/applicant',
-  component: Applicant
+  name: 'aptitude',
+  path: '/aptitude',
+  component: Aptitude
+},
+{
+  name: 'activity',
+  path: '/activity',
+  component: activity
+},
+{
+  name: 'profiles',
+  path: '/profiles',
+  component: Profile
+},
+{
+  name: 'submit',
+  path: '/submit',
+  component: SubmitComponent
 },
 ];
 
@@ -58,9 +76,6 @@ export default new Vuex.Store({
   module  : {},
   
 })
-
-
-
 
 const router = new VueRouter({ mode: 'history', routes: routes});
 

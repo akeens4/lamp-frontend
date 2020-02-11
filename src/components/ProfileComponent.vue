@@ -16,14 +16,14 @@
                 
             </div>
         </div>
-        <div class="row conboxCol2">
+        <div class="row conboxCol2" v-on:submit="showDetails" method="GET">
             <div class="col-sm-2 menu">
                 
-                <p class="pa"><span> <img src="./summary.svg" class="spanImg">Summary </span></p>
-                <p><span> <img src="./info.svg" class="spanImg">Full Info </span></p>
-                <p><span> <img src="./apt.svg" class="spanImg">Aptitude Test </span></p>
-                <p><span> <img src="./act.svg" class="spanImg">Activity Log </span></p>
-                <p style="padding-top: 3rem;"><span> <img src="./Scul.svg" class="spanImg" >Back to Records </span></p>
+                <p class="pa" ><a href="./profile" v-on:click="profile"><span> <img src="./summary.svg" class="spanImg">Summary </span></a></p>
+                <p> <a href="./profiles" v-on:click="profiles"><span> <img src="./info.svg" class="spanImg">Full Info </span></a></p>
+                <p><a href="./aptitude" v-on:click="aptitude"><span> <img src="./apt.svg" class="spanImg">Aptitude Test </span></a></p>
+                <p><a href="./activity" v-on:click="activity"><span> <img src="./act.svg" class="spanImg">Activity Log </span></a></p>
+                <p style="padding-top: 3rem;"><a href="./applicant" v-on:click="applicant"><span> <img src="./Scul.svg" class="spanImg" >Back to Records </span></a></p>
                 
 
                 </div>
@@ -58,15 +58,16 @@
                                 <div class="row bioRow">
                                     <div class="col-sm-6">
                                        <h6>First Name</h6>
-                                       <p id="details">Omotolani{{firstname}}</p>
+                                       <p id="details">Omotolani{{firstName}}</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <h6>Last Name</h6>
-                                       <p id="details">Ligali{{firstname}}</p>
+                                       <p id="details">Ligali{{lastName}}</p>
                                     </div>
 
                                 </div>
                                 <div class="row bioRow">
+                                
                                     <div class="col-sm-6">
                                        <h6>Email</h6>
                                        <p id="details">Ligalit@gmail.com{{email}}</p>
@@ -136,7 +137,7 @@
                     <div class="col-sm-3">
                     </div>
                     <div class="col-sm-6">
-                        <h6 class="app">APP20109</h6>
+                        <h6 class="app">APP20109 {{userName}}</h6>
                         <img class="img-fluid" src="./pix.svg">
                         <h5 >Ligali Omotolani{{applicantId}}</h5>
                         <button type="button" class="btn btn-outline-warning but" >Applicant</button>
@@ -149,9 +150,9 @@
            
                 <div class="row wrap2">
                     <div class="col-sm-8">
-                        <p><span> <img src="./invi.svg" class="deci">Invite for Interview </span></p>
-                        <p><span> <img src="./add.svg" class="deci">Add/View Comments </span></p>
-                        <p><span> <img src="./dec.svg" class="deci">Make Decision </span></p>
+                        <p style="color: #FF7E1D;"><span> <img src="./invi.svg" class="deci" >Invite for Interview </span></p>
+                        <p style="color: #431288;"><span> <img src="./add.svg" class="deci" >Add/View Comments </span></p>
+                        <p style="color: #00A998;"><span> <img src="./dec.svg" class="deci">Make Decision </span></p>
                     </div>
                     <div class="col-sm-4">
                         <P></P>
@@ -180,15 +181,46 @@
             },
             data() {
             return {
+                userName: '',
+                firstName: '',
+                lastName:  '',
+                email: '',
+                verified: '',
+                dob: '',
+                gender: '',
+                phone: '',
+                password:''
             }
             },
 
             created() {
-                axios.get(`http://localhost:8083/lamp-web/getApplicant/{id}`)
+                axios.get(`http://localhost:8083/lamp-web/getApplicant/6`)
                 .then(response => {
                 this.applicants = response.data
                 })
             },
+            profiles:
+                function(){
+                this.$refs.form.profiles()
+                },
+            profile:
+                function(){
+                this.$refs.form.profile()
+                },
+            aptitude:
+                function(){
+                this.$refs.form.aptitude()
+                },
+            activity:
+                function(){
+                this.$refs.form.activity()
+                },
+            applicant:
+                function(){
+                this.$refs.form.applicant()
+                }
+
+
            
         }
         

@@ -60,7 +60,7 @@
               </select> -->
             <!-- </div> -->
             <div class="form-group">
-            <button type="submit" id="register_submit"  class="btn">Apply</button>
+            <button type="submit" id="register_submit" class="btn"><a href="./submit" v-on:click = "submit">Apply</a></button>
            
             </div>
           </form>
@@ -102,9 +102,7 @@
         dob: '',
         gender: '',
         phone: '',
-        password:''
-
-        
+        password:''        
 
       }
     },
@@ -126,7 +124,8 @@
       }).then(function(res){console.log(res)}).catch(function(err){console.log(err.data)})
 
   }  
-    }
+    },
+     
 
   }
 
