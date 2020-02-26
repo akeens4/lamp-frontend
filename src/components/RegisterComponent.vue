@@ -15,7 +15,7 @@
               <div class="form-group col-md-6" style="padding-left:12px;">
                 <!-- <label for="inputEmail4">Lastname</label> -->
                 <input type="text" class="form-control register_input2" name="lastName" id="lastName" v-model="lastName" placeholder="Last Name">
-              </div>        
+              </div>     
             </div>
             <div class="form-group" id="register_bigform1">
               <input type="text" class="form-control" name="userName" id="userName" v-model="userName" placeholder="Username">
@@ -25,15 +25,14 @@
                 <!-- <label for="inputEmail4">Email</border-color: red;label> -->
                 <input type="email" class="form-control" name="email" id="email" v-model="email" placeholder="Email Address">
             </div>
-<<<<<<< HEAD
+
             <div class="form-group">
               <input type="checkbox" class="form-control" name="verified" id="verified" v-model="verified" />
             </div>
-=======
             <!-- <div class="form-group">
               <input type="checkbox" class="form-control" true-value="yes" false-value="no" name="verified" id="verified" v-model="verified" />
             </div> -->
->>>>>>> c85a74016048430a9dcf14bc28a22285d32d7fbf
+
 
               <div  class="form-group" id="register_bigform">
               <!-- <label for="inputPhone">Phonenumber</label> -->
